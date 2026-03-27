@@ -18,9 +18,9 @@ int main() {
   printf("Digite o código da carta 1:\n");
     scanf("%s", codigo);
   printf("Digite a cidade da carta 1:\n");
-    scanf("%s", cidade);
+    scanf(" %49[^\n]", cidade);
   printf("Digite o estado da carta 1:\n");
-    scanf("%s", estado);
+    scanf(" %49[^\n]", estado);
   printf("Digite a população da carta 1:\n");
     scanf("%d", &populaçao);
   printf("Digite o PIB da carta 1:\n");
@@ -30,13 +30,16 @@ int main() {
   printf("Digite o numero de pontos turisticos da carta 1:\n");
     scanf("%d", &turisticos);      
 
+  float densidade1 = populaçao / area;
+  float percapita1 = pib / populaçao;
+
   //CARTA2
   printf("Digite o código da carta 2:\n");
     scanf("%s", codigo2);
   printf("Digite a cidade da carta 2:\n");
-    scanf("%s", cidade2);
+    scanf(" %99[^\n]", cidade2);
   printf("Digite o estado da carta 2:\n");
-    scanf("%s", estado2);
+    scanf(" %99[^\n]", estado2);
   printf("Digite a população da carta 2:\n");
     scanf("%d", &populaçao2);
   printf("Digite o PIB da carta 2:\n");
@@ -46,6 +49,9 @@ int main() {
   printf("Digite o numero de pontos turisticos da carta 2:\n");
     scanf("%d", &turisticos2);
   printf("\n");
+
+  float densidade2 = populaçao2 / area2;
+  float percapita2 = pib2 / populaçao2;
 
   // Área para exibição dos dados da cidade
 
@@ -58,6 +64,8 @@ int main() {
   printf("ÁREA: %.2f km².\n", area);
   printf("PIB: %.2f de reais.\n", pib);
   printf("NUMERO DE PONTOS TURISTICOS: %d.\n", turisticos);
+  printf("DENSIDADE DEMOGRÁFICA: %.2f habitantes por km².\n", densidade1);
+  printf("PIB PER CAPITA: %.2f reais por habitante.\n", percapita1);
   printf("\n");
 
   //CARTA2
@@ -68,6 +76,8 @@ int main() {
   printf("POPULAÇÃO: %d habitantes.\n", populaçao2);
   printf("ÁREA: %.2f km².\n", area2);
   printf("PIB: %.2f de reais.\n", pib2);
+  printf("DENSIDADE DEMOGRÁFICA: %.2f habitantes por km².\n", densidade2);
+  printf("PIB PER CAPITA: %.2f reais por habitante.\n", percapita2);
   printf("NUMERO DE PONTOS TURISTICOS: %d.\n", turisticos2);
 
 
