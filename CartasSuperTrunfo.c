@@ -19,9 +19,7 @@ int main() {
     scanf("%s", codigo);
   printf("Digite a cidade da carta 1:\n");
     scanf(" %49[^\n]", cidade);
-    scanf(" %49[^\n]", cidade);
   printf("Digite o estado da carta 1:\n");
-    scanf(" %49[^\n]", estado);
     scanf(" %49[^\n]", estado);
   printf("Digite a população da carta 1:\n");
     scanf("%d", &populaçao);
@@ -54,6 +52,7 @@ int main() {
 
   float densidade2 = populaçao2 / area2;
   float percapita2 = pib2 / populaçao2;
+
 
   // Área para exibição dos dados da cidade
 
