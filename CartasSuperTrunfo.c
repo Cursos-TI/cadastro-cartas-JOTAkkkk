@@ -18,9 +18,9 @@ int main() {
   printf("Digite o código da carta 1:\n");
     scanf("%s", codigo);
   printf("Digite a cidade da carta 1:\n");
-    scanf("%s", cidade);
+    scanf(" %49[^\n]", cidade);
   printf("Digite o estado da carta 1:\n");
-    scanf("%s", estado);
+    scanf(" %49[^\n]", estado);
   printf("Digite a população da carta 1:\n");
     scanf("%d", &populaçao);
   printf("Digite o PIB da carta 1:\n");
@@ -34,9 +34,9 @@ int main() {
   printf("Digite o código da carta 2:\n");
     scanf("%s", codigo2);
   printf("Digite a cidade da carta 2:\n");
-    scanf("%s", cidade2);
+    scanf(" %49[^\n]", cidade2);
   printf("Digite o estado da carta 2:\n");
-    scanf("%s", estado2);
+    scanf(" %49[^\n]", estado2);
   printf("Digite a população da carta 2:\n");
     scanf("%d", &populaçao2);
   printf("Digite o PIB da carta 2:\n");
@@ -51,8 +51,8 @@ int main() {
 
   //CARTA1
   printf("CARTA 1\n");
-  printf("ESTADO: %s.\n", estado);
   printf("CÓDIGO: %s.\n", codigo);
+  printf("ESTADO: %s.\n", estado);
   printf("NOME DA CIDADE: %s.\n", cidade);
   printf("POPULAÇÃO: %d habitantes.\n", populaçao);
   printf("ÁREA: %.2f km².\n", area);
@@ -62,8 +62,8 @@ int main() {
 
   //CARTA2
   printf("CARTA 2\n");
-  printf("ESTADO: %s.\n", estado2);
   printf("CÓDIGO: %s.\n", codigo2);
+  printf("ESTADO: %s.\n", estado2);
   printf("NOME DA CIDADE: %s.\n", cidade2);
   printf("POPULAÇÃO: %d habitantes.\n", populaçao2);
   printf("ÁREA: %.2f km².\n", area2);
