@@ -59,8 +59,8 @@ int main() {
 
   //CARTA1
   printf("CARTA 1\n");
-  printf("CÓDIGO: %s.\n", codigo);
   printf("ESTADO: %s.\n", estado);
+  printf("CÓDIGO: %s.\n", codigo);
   printf("NOME DA CIDADE: %s.\n", cidade);
   printf("POPULAÇÃO: %d habitantes.\n", populaçao);
   printf("ÁREA: %.2f km².\n", area);
@@ -72,8 +72,8 @@ int main() {
 
   //CARTA2
   printf("CARTA 2\n");
-  printf("CÓDIGO: %s.\n", codigo2);
   printf("ESTADO: %s.\n", estado2);
+  printf("CÓDIGO: %s.\n", codigo2);
   printf("NOME DA CIDADE: %s.\n", cidade2);
   printf("POPULAÇÃO: %d habitantes.\n", populaçao2);
   printf("ÁREA: %.2f km².\n", area2);
