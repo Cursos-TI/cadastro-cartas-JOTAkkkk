@@ -18,9 +18,9 @@ int main() {
   printf("Digite o código da carta 1:\n");
     scanf("%s", codigo);
   printf("Digite a cidade da carta 1:\n");
-    scanf(" %49[^\n]", cidade);
+    scanf(" %49[^\n]", cidade); // Comando para ler uma string com espaços, limitando a leitura a 49 caracteres para evitar overflow
   printf("Digite o estado da carta 1:\n");
-    scanf(" %49[^\n]", estado);
+    scanf(" %49[^\n]", estado); // O espaço antes do %49[^\n] é para consumir o caractere de nova linha deixado pelo scanf anterior
   printf("Digite a população da carta 1:\n");
     scanf("%d", &populaçao);
   printf("Digite o PIB da carta 1:\n");
@@ -30,8 +30,9 @@ int main() {
   printf("Digite o numero de pontos turisticos da carta 1:\n");
     scanf("%d", &turisticos);      
 
-  float densidade1 = populaçao / area;
-  float percapita1 = pib / populaçao;
+  // Cálculo da densidade demográfica e do PIB per capita para carta1  
+  float densidade1 = populaçao / area; // Cálculo da densidade demográfica: população dividida pela área
+  float percapita1 = pib / populaçao; // Cálculo do PIB per capita: PIB dividido pela população
 
   //CARTA2
   printf("Digite o código da carta 2:\n");
@@ -50,12 +51,11 @@ int main() {
     scanf("%d", &turisticos2);
   printf("\n");
 
+  // Cálculo da densidade demográfica e do PIB per capita para carta2
   float densidade2 = populaçao2 / area2;
   float percapita2 = pib2 / populaçao2;
 
-
   // Área para exibição dos dados da cidade
-
   //CARTA1
   printf("CARTA 1\n");
   printf("ESTADO: %s.\n", estado);
@@ -67,7 +67,7 @@ int main() {
   printf("NUMERO DE PONTOS TURISTICOS: %d.\n", turisticos);
   printf("DENSIDADE DEMOGRÁFICA: %.2f habitantes por km².\n", densidade1);
   printf("PIB PER CAPITA: %.2f reais por habitante.\n", percapita1);
-  printf("\n");
+  printf("\n"); 
 
   //CARTA2
   printf("CARTA 2\n");
