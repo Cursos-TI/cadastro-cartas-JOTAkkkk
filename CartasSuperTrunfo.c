@@ -12,6 +12,7 @@ int main() {
   float area, pib, area2, pib2;  
   int populaçao, turisticos, populaçao2, turisticos2;
 
+
   // Área para entrada de dados
 
   //CARTA1
@@ -33,6 +34,7 @@ int main() {
   // Cálculo da densidade demográfica e do PIB per capita para carta1  
   float densidade1 = populaçao / area; // Cálculo da densidade demográfica: população dividida pela área
   float percapita1 = pib / populaçao; // Cálculo do PIB per capita: PIB dividido pela população
+  float superpoder = area + populaçao + pib + turisticos + percapita1 + (1 / densidade1); // Cálculo do super poder: soma de todas as propriedades da carta1
 
   //CARTA2
   printf("Digite o código da carta 2:\n");
@@ -54,7 +56,7 @@ int main() {
   // Cálculo da densidade demográfica e do PIB per capita para carta2
   float densidade2 = populaçao2 / area2;
   float percapita2 = pib2 / populaçao2;
-
+  float superpoder2 = area2 + populaçao2 + pib2 + turisticos2 + percapita2 + (1 / densidade2); // Cálculo do super poder: soma de todas as propriedades da carta2
   // Área para exibição dos dados da cidade
   //CARTA1
   printf("CARTA 1\n");
@@ -67,6 +69,7 @@ int main() {
   printf("NUMERO DE PONTOS TURISTICOS: %d.\n", turisticos);
   printf("DENSIDADE DEMOGRÁFICA: %.2f habitantes por km².\n", densidade1);
   printf("PIB PER CAPITA: %.2f reais por habitante.\n", percapita1);
+  printf("SUPER PODER: %.2f.\n", superpoder);
   printf("\n"); 
 
   //CARTA2
@@ -80,7 +83,20 @@ int main() {
   printf("DENSIDADE DEMOGRÁFICA: %.2f habitantes por km².\n", densidade2);
   printf("PIB PER CAPITA: %.2f reais por habitante.\n", percapita2);
   printf("NUMERO DE PONTOS TURISTICOS: %d.\n", turisticos2);
+  printf("SUPER PODER: %.2f.\n", superpoder2);
+  printf("\n");
 
+  //comparação das cartas
 
-return 0;
-} 
+  printf("Comparação entre as cartas:\n");
+  printf("1 = Carta 1, 0 = Carta 2\n");
+  printf("\nPopulação: %d\n", populaçao > populaçao2);
+  printf("Área: %d\n", area > area2);
+  printf("PIB: %d\n", pib > pib2);
+  printf("Número de pontos turísticos: %d\n", turisticos > turisticos2);
+  printf("Densidade demográfica: %d\n", densidade1 < densidade2);
+  printf("PIB per capita: %d\n", percapita1 > percapita2);
+  printf("Super poder: %d\n", superpoder > superpoder2); 
+  
+  return 0;
+}
